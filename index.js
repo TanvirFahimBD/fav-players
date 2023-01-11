@@ -12,16 +12,23 @@ const totalExpense = document.getElementById("total-expense");
 
 // player select function
 for (const player of players) {
+  console.log(selectedPlayers.children.length);
   player.addEventListener("click", function () {
+    // disable clicked button
+    player.setAttribute("disabled", true);
     // get selected player name
     const selectedPlayer =
       player.parentNode.getElementsByClassName("card-title")[0].innerText;
-    // add new selected player to list
-    const li = document.createElement("li");
-    li.innerText = selectedPlayer;
-    selectedPlayers.appendChild(li);
-    // show total selected player in list
-    selectedTotalPlayer.innerText = selectedPlayers.children.length;
+    if (selectedPlayers.children.length < 5) {
+      // add new selected player to list
+      const li = document.createElement("li");
+      li.innerText = selectedPlayer;
+      selectedPlayers.appendChild(li);
+      // show total selected player in list
+      selectedTotalPlayer.innerText = selectedPlayers.children.length;
+    } else {
+      alert("Maximum 5 players already selected");
+    }
   });
 }
 
@@ -34,12 +41,16 @@ playerExpenseBtn.addEventListener("click", function (e) {
   perPlayerExpense.value = "";
 });
 
+function convertToFloat(value) {
+  return parseFloat(value);
+}
+
 // total expense count
 totalExpenseBtn.addEventListener("click", function () {
   totalExpense.innerText =
-    parseFloat(playerExpense.innerText) +
-    parseFloat(managerExpense.value) +
-    parseFloat(coachExpense.value);
+    convertToFloat(playerExpense.innerText) +
+    convertToFloat(managerExpense.value) +
+    convertToFloat(coachExpense.value);
   managerExpense.value = "";
   coachExpense.value = "";
 });
