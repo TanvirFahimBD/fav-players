@@ -31,7 +31,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Lionel Messi</h5>
                                 <p class="card-text">Lionel Messi with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button class="btn btn-primary">
+                                <button class="btn btn-primary player-btn">
                                     Select
                                 </button>
                             </div>
@@ -43,7 +43,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Neymar Jr</h5>
                                 <p class="card-text">Neymar Jr with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button class="btn btn-primary">
+                                <button class="btn btn-primary player-btn">
                                     Select
                                 </button>
                             </div>
@@ -55,7 +55,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Kylian Mbappé</h5>
                                 <p class="card-text">Kylian Mbappé with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button class="btn btn-primary">
+                                <button class="btn btn-primary player-btn">
                                     Select
                                 </button>
                             </div>
@@ -67,7 +67,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Vítor Machado</h5>
                                 <p class="card-text">Vítor Machado with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button class="btn btn-primary">
+                                <button class="btn btn-primary player-btn">
                                     Select
                                 </button>
                             </div>
@@ -79,7 +79,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Sergio Ramos</h5>
                                 <p class="card-text">Sergio Ramos with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button class="btn btn-primary">
+                                <button class="btn btn-primary player-btn">
                                     Select
                                 </button>
                             </div>
@@ -91,7 +91,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">LRenato Sanches</h5>
                                 <p class="card-text">Renato Sanches with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button class="btn btn-primary">
+                                <button class="btn btn-primary player-btn">
                                     Select
                                 </button>
                             </div>
@@ -103,13 +103,8 @@
             <div class="col-md-4">
                 <!-- selected players part -->
                 <div class="mb-4 border px-2 py-4">
-                    <h1>Selected - <span>5</span> </h1>
-                    <ol>
-                        <li>Neymar Jr</li>
-                        <li>Neymar Jr</li>
-                        <li>Neymar Jr</li>
-                        <li>Neymar Jr</li>
-                        <li>Neymar Jr</li>
+                    <h1>Selected - <span id="selected-total-player">0</span> </h1>
+                    <ol id="selected-players">
                     </ol>
                 </div>
                 <!-- budget part -->
@@ -133,19 +128,19 @@
                     </div>
                     <button class="btn btn-primary my-3">Calculate total</button>
                     <br>
-                        <span class="me-3">Total </span>
-                        <span class="me-3 text-danger">$1000 </span>
-                   
+                    <span class="me-3">Total </span>
+                    <span class="me-3 text-danger">$1000 </span>
                 </div>
             </div>
         </div>        
     </div>
-    <!-- footer section  -->
     <hr>
+    <!-- footer section  -->
     <div class="text-center py-5">
         <p>Copyright @ 2022 All Rights Reserved.</p>
     </div>
 <!-- bootstrap js cdn  -->
+    <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
