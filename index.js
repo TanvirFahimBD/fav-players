@@ -2,6 +2,9 @@
 const players = document.getElementsByClassName("player-btn");
 const selectedPlayers = document.getElementById("selected-players");
 const selectedTotalPlayer = document.getElementById("selected-total-player");
+const perPlayerPrice = document.getElementById("per-player-price");
+const playerExpenseBtn = document.getElementById("player-expense-btn");
+const playerExpense = document.getElementById("players-expense");
 
 // player select function
 for (const player of players) {
@@ -17,3 +20,10 @@ for (const player of players) {
     selectedTotalPlayer.innerText = selectedPlayers.children.length;
   });
 }
+
+// player expense count
+playerExpenseBtn.addEventListener("click", function (e) {
+  playerExpense.innerText =
+    perPlayerPrice.value * selectedPlayers.children.length;
+  perPlayerPrice.value = "";
+});
