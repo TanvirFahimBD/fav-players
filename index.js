@@ -2,9 +2,13 @@
 const players = document.getElementsByClassName("player-btn");
 const selectedPlayers = document.getElementById("selected-players");
 const selectedTotalPlayer = document.getElementById("selected-total-player");
-const perPlayerPrice = document.getElementById("per-player-price");
+const perPlayerExpense = document.getElementById("per-player-price");
 const playerExpenseBtn = document.getElementById("player-expense-btn");
 const playerExpense = document.getElementById("players-expense");
+const managerExpense = document.getElementById("manager-expense");
+const coachExpense = document.getElementById("coach-expense");
+const totalExpenseBtn = document.getElementById("total-expense-btn");
+const totalExpense = document.getElementById("total-expense");
 
 // player select function
 for (const player of players) {
@@ -23,7 +27,19 @@ for (const player of players) {
 
 // player expense count
 playerExpenseBtn.addEventListener("click", function (e) {
+  // all players expense count
   playerExpense.innerText =
-    perPlayerPrice.value * selectedPlayers.children.length;
-  perPlayerPrice.value = "";
+    perPlayerExpense.value * selectedPlayers.children.length;
+  // clear per player expense amount
+  perPlayerExpense.value = "";
+});
+
+// total expense count
+totalExpenseBtn.addEventListener("click", function () {
+  totalExpense.innerText =
+    parseFloat(playerExpense.innerText) +
+    parseFloat(managerExpense.value) +
+    parseFloat(coachExpense.value);
+  managerExpense.value = "";
+  coachExpense.value = "";
 });

@@ -110,26 +110,32 @@
                 <!-- budget part -->
                 <div class="mb-4 border px-2 py-4">
                     <h1>Budget</h1>
-                    <div class="d-flex justify-content-evenly my-3">
-                        <span class="me-3">Per Player </span>
-                        <input type="text" id="per-player-price">
-                    </div>
-                    <button class="btn btn-primary my-3" id="player-expense-btn">Calculate</button>
-                    <br>
+                    <!-- player expense count  -->
+                    <div>
+                        <div class="d-flex justify-content-evenly my-3">
+                            <span class="me-3">Per Player </span>
+                            <input type="text" id="per-player-price">
+                        </div>
+                        <button class="btn btn-primary my-3" id="player-expense-btn">Calculate</button>
+                        <br>
                         <span class="me-3">Player expense </span>
                         <span class="me-3">$ <span id="players-expense">0</span> </span>
-                    <div class="d-flex justify-content-evenly my-3">
-                        <span class="me-3">Manager </span>
-                        <input type="text">
                     </div>
-                    <div class="d-flex justify-content-evenly my-3">
-                        <span class="me-3">Coach </span>
-                        <input type="text" >
+                    <!-- total expense count  -->
+                    <div>
+                        <div class="d-flex justify-content-evenly my-3">
+                            <span class="me-3">Manager </span>
+                            <input type="text" id="manager-expense">
+                        </div>
+                        <div class="d-flex justify-content-evenly my-3">
+                            <span class="me-3">Coach </span>
+                            <input type="text" id="coach-expense">
+                        </div>
+                        <button class="btn btn-primary my-3" id="total-expense-btn">Calculate total</button>
+                        <br>
+                        <span class="me-3">Total </span>
+                        <span class="me-3 text-danger">$ <span id="total-expense">0</span> </span>
                     </div>
-                    <button class="btn btn-primary my-3">Calculate total</button>
-                    <br>
-                    <span class="me-3">Total </span>
-                    <span class="me-3 text-danger">$ <span>0</span> </span>
                 </div>
             </div>
         </div>        
@@ -145,5 +151,4 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
